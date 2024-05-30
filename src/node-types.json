@@ -32,6 +32,10 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
           "type": "operator",
           "named": true
         },
@@ -56,6 +60,40 @@
     "type": "keyword",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "object",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "operator",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "source_file",
@@ -101,6 +139,10 @@
       "types": [
         {
           "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "object",
           "named": true
         },
         {
@@ -313,6 +355,10 @@
     "named": false
   },
   {
+    "type": "{",
+    "named": false
+  },
+  {
     "type": "{#",
     "named": false
   },
@@ -322,6 +368,10 @@
   },
   {
     "type": "{{",
+    "named": false
+  },
+  {
+    "type": "}",
     "named": false
   },
   {

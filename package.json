@@ -9,14 +9,14 @@
   "author": "Stephan Seitz",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "nan": "^2.14.2"
+    "nan": "^2.18.0"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/theHamsta/tree-sitter-jinja2.git"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.19.1"
+    "tree-sitter-cli": "^0.21.0"
   },
   "tree-sitter": [
     {
