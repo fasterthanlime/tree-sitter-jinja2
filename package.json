@@ -3,20 +3,33 @@
   "version": "0.2.0",
   "description": "Tree-sitter grammar for Jinja2 templates",
   "main": "bindings/node",
+  "types": "bindings/node",
   "scripts": {
-    "test": "tree-sitter generate && tree-sitter parse example-file"
+    "test": "tree-sitter generate && tree-sitter parse example-file",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
   },
   "author": "Stephan Seitz",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "nan": "^2.18.0"
+    "node-addon-api": "^7.1.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/theHamsta/tree-sitter-jinja2.git"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.21.0"
+    "tree-sitter-cli": "^0.22.6",
+    "prebuildify": "^6.0.0"
   },
   "tree-sitter": [
     {
@@ -26,5 +39,13 @@
         "jinja2"
       ]
     }
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
   ]
 }
