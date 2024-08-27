@@ -1,13 +1,14 @@
 {
   "name": "tree-sitter-jinja2",
-  "version": "0.2.0",
+  "version": "0.0.9",
   "description": "Tree-sitter grammar for Jinja2 templates",
   "main": "bindings/node",
   "types": "bindings/node",
   "scripts": {
-    "test": "tree-sitter generate && tree-sitter parse example-file",
     "install": "node-gyp-build",
-    "prebuildify": "prebuildify --napi --strip"
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
+    "test": "node --test bindings/node/*_test.js"
   },
   "author": "Stephan Seitz",
   "license": "GPL-3.0-or-later",
