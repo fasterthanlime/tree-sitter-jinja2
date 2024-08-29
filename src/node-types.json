@@ -47,16 +47,6 @@
     }
   },
   {
-    "type": "expression_begin",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "expression_end",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "keyword",
     "named": true,
     "fields": {}
@@ -279,6 +269,14 @@
     "named": false
   },
   {
+    "type": "expression_begin",
+    "named": true
+  },
+  {
+    "type": "expression_end",
+    "named": true
+  },
+  {
     "type": "extends",
     "named": false
   },
@@ -367,15 +365,7 @@
     "named": false
   },
   {
-    "type": "{{",
-    "named": false
-  },
-  {
     "type": "}",
-    "named": false
-  },
-  {
-    "type": "}}",
     "named": false
   }
 ]

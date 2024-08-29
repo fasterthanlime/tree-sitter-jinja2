@@ -38,13 +38,13 @@ module.exports = grammar ({
     statement_begin: $ => seq('{%', optional($.white_space_control)),
     statement_end: $ => seq(optional($.white_space_control), '%}'),
 
-    expression: $ => seq($.expression_begin, $._inner_text2, $.expression_end),
-    expression_begin: $ => seq('{{'),
-    expression_end: $ => seq('}}'),
+    expression: $ => seq($.expression_begin, optional($._inner_text2), $.expression_end),
+    expression_begin: $ => '{{',
+    expression_end: $ => '}}',
 
     object: $ => seq($._object_begin, optional(seq($._inner_text2)), $._object_end),
-    _object_begin: $ => seq('{'),
-    _object_end: $ => seq('}'),
+    _object_begin: $ => '{',
+    _object_end: $ => '}',
    
     comment: $ => seq('{#', /[^#]*/, '#}'),
 
