@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-jinja2",
-  "version": "0.0.9",
+  "version": "0.0.12",
   "description": "Tree-sitter grammar for Jinja2 templates",
   "main": "bindings/node",
   "types": "bindings/node",
@@ -17,7 +17,7 @@
     "node-gyp-build": "^4.8.0"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.21.0"
+    "tree-sitter": "^0.23.0"
   },
   "peerDependenciesMeta": {
     "tree_sitter": {
@@ -29,18 +29,9 @@
     "url": "git://github.com/theHamsta/tree-sitter-jinja2.git"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.22.6",
+    "tree-sitter-cli": "^0.23.0",
     "prebuildify": "^6.0.0"
   },
-  "tree-sitter": [
-    {
-      "scope": "source.jija2",
-      "file-types": [
-        "jinja",
-        "jinja2"
-      ]
-    }
-  ],
   "files": [
     "grammar.js",
     "binding.gyp",
@@ -48,5 +39,11 @@
     "bindings/node/*",
     "queries/*",
     "src/**"
+  ],
+  "tree-sitter": [
+    {
+      "scope": "source.jinja2",
+      "injection-regex": "^jinja2$"
+    }
   ]
 }

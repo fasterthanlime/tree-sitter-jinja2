@@ -313,6 +313,10 @@
     "named": false
   },
   {
+    "type": "is",
+    "named": false
+  },
+  {
     "type": "macro",
     "named": false
   },

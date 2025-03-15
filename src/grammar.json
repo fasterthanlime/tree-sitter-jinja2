@@ -361,6 +361,10 @@
         {
           "type": "STRING",
           "value": "do"
+        },
+        {
+          "type": "STRING",
+          "value": "is"
         }
       ]
     },
